@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Subtle concentric depth rings (water table aquifers) -->
+  <circle cx="256" cy="300" r="170" fill="none" stroke="#14b8a6" stroke-width="2" stroke-opacity="0.2" stroke-dasharray="8 8" />
+  <circle cx="256" cy="300" r="210" fill="none" stroke="#2dd4bf" stroke-width="1.5" stroke-opacity="0.15" />
+
+  <!-- Outer Water Drop Silhouette -->
+  <g filter="url(#shadow)">
+    <!-- Water Drop Core -->
+    <path d="M256 90 C256 90, 140 230, 140 320 A116 116 0 0 0 372 320 C372 230, 256 90, 256 90 Z" fill="url(#waterGrad)" />
+    
+    <!-- Water Highlight sheen -->
+    <path d="M256 125 C256 125, 172 245, 172 315 A84 84 0 0 0 256 399 C200 399, 160 350, 160 305 C160 235, 256 125, 256 125 Z" fill="#ffffff" fill-opacity="0.25" />
+    
+    <!-- Sprout / Bhumi (Earth) emerging from the water -->
+    <!-- Left Leaf -->
+    <path d="M256 310 C210 270, 175 285, 185 330 C200 345, 235 340, 256 310 Z" fill="url(#leafGrad)" />
+    
+    <!-- Right Leaf -->
+    <path d="M256 280 C310 230, 350 260, 335 305 C315 325, 280 315, 256 280 Z" fill="#86efac" />
+    
+    <!-- Central Stem & Wheat Ear -->
+    <path d="M256 380 Q256 270 256 200" stroke="#fef08a" stroke-width="6" stroke-linecap="round" fill="none" />
+    <circle cx="256" cy="190" r="7" fill="#fef08a" />
+    <circle cx="244" cy="215" r="5" fill="#facc15" />
+    <circle cx="268" cy="215" r="5" fill="#facc15" />
+    <circle cx="242" cy="235" r="5" fill="#facc15" />
+    <circle cx="270" cy="235" r="5" fill="#facc15" />
+  </g>
+
+  <!-- Ground Layer Curve at bottom -->
+  <path d="M80 430 Q256 390 432 430 L432 450 Q256 410 80 450 Z" fill="url(#soilGrad)" opacity="0.85" />
+  <circle cx="256" cy="416" r="4" fill="#fef3c7" opacity="0.9" />
+  <circle cx="220" cy="421" r="3" fill="#fef3c7" opacity="0.7" />
+  <circle cx="292" cy="421" r="3" fill="#fef3c7" opacity="0.7" />
+</svg>

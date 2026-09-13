@@ -1,0 +1,6 @@
+{
+  "name": "BhumiJal",
+  "description": "AI-powered water security platform for Indian farmers providing real-time groundwater status, rainfall forecasts, soil health, crop recommendations, and agricultural alerts.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
